@@ -1,2 +1,7 @@
 FROM almalinux:9
-RUN dnf install nginx -y
+ENV course= "DEVOPS with AWS"\
+    Trainer="Sivakumar"\
+    Duration= "120hrs"
+RUN echo"Hello from ${Trainer}">/tmp/devops.txt
+CMD ["sleep","100"]
+    
