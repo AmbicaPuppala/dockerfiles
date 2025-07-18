@@ -1,10 +1,12 @@
-ARG version
+ARG version  
+# ARG variable can be used before FROM instruction to provide version of base image and this arg value doesnot work or cannot access after FROM instruction  
 FROM almalinux:${version:-9}
 ENV course="DevOps with AWS" \
     trainer="sivakumar reddy" \
     duration="120HRS"
 #here user1 is key, someuser is default value
 ARG USERNAME=Sivakumar
-ENV USERNAME=$USERNAME
+#arg value can be set to env var to access the arg value inside container
+ENV USERNAME=$USERNAME 
 RUN echo "Hello User: ${USERNAME}, image version: ${version}" > /tmp/devops.txt
 CMD ["sleep", "100"]
