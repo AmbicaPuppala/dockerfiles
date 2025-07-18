@@ -1,6 +1,6 @@
 FROM almalinux:9
-ENV course= "DEVOPS with AWS" \
-    Trainer="Sivakumar" \
-    Duration= "120hrs"
-RUN echo"Hello from ${Trainer}" > /tmp/devops.txt
+ENV course="DevOps with AWS" \
+    trainer="sivakumar reddy" \
+    duration="120hours"
+RUN echo"Hello from ${trainer}" > /tmp/devops.txt
 CMD ["sleep","100"]
